@@ -25,4 +25,9 @@ print("Copy is not the original" + str(message is message[:]))
 * find: `s.find('foo')`
 * replace: `s.replace('foo', 'bar')`
 * upper: `s.upper()`
+* lower: `s.lower()`
 * split: `s.split(',')`
+* digits only?: `s.isdigit()`
+* alphanum?: `s.isalpha()`
+* strip right: `s.rstrip()`
+* capitalize: `s.capitalize()`

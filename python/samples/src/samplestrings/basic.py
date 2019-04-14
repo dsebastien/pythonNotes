@@ -56,3 +56,14 @@ split_string = comma_delimited_string.split(',')
 print(split_string)
 
 print(message.upper())
+print(message.lower())
+
+print("Message is digit: "+str(message.isdigit()))
+print("Message is alpha: "+str(message.isalpha()))
+
+message_with_right_whitespace = 'foo     '
+print(message_with_right_whitespace.rstrip())
+
+print(message.lower().capitalize())
+
+print(message.swapcase())
