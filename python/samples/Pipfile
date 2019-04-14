@@ -1,0 +1,31 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+
+[dev-packages]
+black = "==19.3b0"
+flake8 = "==3.7.7"
+flake8-bugbear = "==19.3.0"
+pytest = "==4.4.0"
+pytest-cov = "==2.6.1"
+pre-commit = "==1.15.1"
+mypy = "==0.700"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+app = "bash ./run-app.sh"
+test = "pytest --cov=src/ tests/"
+format = "pre-commit run black"
+format-all = "pre-commit run black --all-files"
+lint = "pre-commit run flake8"
+lint-all = "pre-commit run flake8 --all-files"
+types = "pre-commit run mypy"
+types-all = "pre-commit run mypy --all-files"

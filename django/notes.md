@@ -23,6 +23,12 @@
 ## REST
 Django has the Django Rest Framework (DRF): https://www.django-rest-framework.org/.
 
+### Testing
+...
+
+## Testing
+...
+
 ## Deployment
 
 ### WSGI: Web Server Gateway Interface
@@ -31,3 +37,7 @@ Python standard for the communication between and server and application.
 References:
 * https://wsgi.readthedocs.io/en/latest/
 * https://www.python.org/dev/peps/pep-3333
+
+### Checks
+
+https://docs.djangoproject.com/en/2.1/ref/django-admin/#check

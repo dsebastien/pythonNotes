@@ -1,0 +1,15 @@
+# Python
+__pycache__
+*.pyc
+
+# Pytest
+.pytest_cache
+
+# mypy
+.mypy_cache
+
+# Coverage
+.coverage
+
+# IDEs
+.idea

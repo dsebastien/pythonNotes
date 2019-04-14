@@ -1,0 +1,27 @@
+version: "3"
+services:
+  main:
+    build:
+      context: .
+      args:
+        BUILD_PYTHON_VERSION: ${BUILD_PYTHON_VERSION}
+        BUILD_USERNAME: ${BUILD_USERNAME}
+        BUILD_UID: ${BUILD_UID}
+        BUILD_GID: ${BUILD_GID}
+    restart: unless-stopped
+    volumes:
+      - $PWD/src:/home/${BUILD_USERNAME}/src/
+      - $PWD/tests:/home/${BUILD_USERNAME}/tests/
+      - $PWD/Pipfile:/home/${BUILD_USERNAME}/Pipfile
+      - $PWD/Pipfile.lock:/home/${BUILD_USERNAME}/Pipfile.lock
+      - $PWD/.python-version:/home/${BUILD_USERNAME}/.python-version
+      - $PWD/.flake8:/home/${BUILD_USERNAME}/.flake8
+      - $PWD/pyproject.toml:/home/${BUILD_USERNAME}/pyproject.toml
+      - $PWD/run-app.sh:/home/${BUILD_USERNAME}/run-app.sh
+    env_file:
+      - env_file
+#    expose:
+#	  - 8080
+#    links:
+#      - ...
+#volumes:

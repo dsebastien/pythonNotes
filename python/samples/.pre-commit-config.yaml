@@ -1,0 +1,17 @@
+repos:
+  -   repo: https://github.com/ambv/black
+      rev: stable
+      hooks:
+        - id: black
+          language_version: python3.6
+  -   repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v1.2.3
+      hooks:
+        - id: flake8
+  -   repo: https://github.com/pre-commit/mirrors-mypy
+      rev: '4e5c70d9dc9e0a3fc096537df4895f22e20f77d9'  # Use the sha / tag you want to point at
+      hooks:
+        - id: mypy
+          # --ignore-missing-imports, --no-strict-optionals
+          # reference: https://github.com/pre-commit/mirrors-mypy
+          #args: []
